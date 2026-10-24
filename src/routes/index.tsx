@@ -135,10 +135,10 @@ function Home() {
           <Link to="/shop" className="btn-ghost self-start md:self-end">Shop all</Link>
         </div>
         <div data-grid className="grid grid-cols-2 gap-x-4 gap-y-14 md:grid-cols-12 md:gap-x-8">
-          <div className="col-span-2 md:col-span-6"><ProductCard p={products[0]} aspect="aspect-[4/5]" /></div>
-          <div className="col-span-1 md:col-span-4 md:col-start-9 md:mt-48"><ProductCard p={products[1]} aspect="aspect-[3/4]" /></div>
-          <div className="col-span-1 md:col-span-3 md:col-start-2 md:-mt-10"><ProductCard p={products[3]} aspect="aspect-[3/4]" /></div>
-          <div className="col-span-2 md:col-span-5 md:col-start-7 md:mt-24"><ProductCard p={products[2]} aspect="aspect-[4/5]" /></div>
+          <div className="col-span-2 md:col-span-6"><ProductCard p={products[0]!} aspect="aspect-[4/5]" /></div>
+          <div className="col-span-1 md:col-span-4 md:col-start-9 md:mt-48"><ProductCard p={products[1]!} aspect="aspect-[3/4]" /></div>
+          <div className="col-span-1 md:col-span-3 md:col-start-2 md:-mt-10"><ProductCard p={products[3]!} aspect="aspect-[3/4]" /></div>
+          <div className="col-span-2 md:col-span-5 md:col-start-7 md:mt-24"><ProductCard p={products[2]!} aspect="aspect-[4/5]" /></div>
         </div>
       </section>
 

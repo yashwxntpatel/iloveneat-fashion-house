@@ -32,7 +32,7 @@ function ProductPage() {
   const p = getProduct(slug)!;
   const root = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<string | null>(null);
-  const [colour, setColour] = useState(p.colours[0].name);
+  const [colour, setColour] = useState(p.colours[0]!.name);
   const [open, setOpen] = useState<string | null>("Details");
   const [warn, setWarn] = useState(false);
   const { add } = useCart();
@@ -40,7 +40,7 @@ function ProductPage() {
 
   useEffect(() => {
     setSize(null);
-    setColour(p.colours[0].name);
+    setColour(p.colours[0]!.name);
     const ctx = gsap.context(() => {
       gsap.from("[data-pdp-in]", { y: 30, opacity: 0, duration: 1.2, ease: "expo.out", stagger: 0.08, delay: 0.1 });
     }, root);

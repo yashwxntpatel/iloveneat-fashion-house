@@ -157,7 +157,7 @@ export function Footer() {
           <div key={c.h}>
             <p className="eyebrow opacity-50">{c.h}</p>
             <ul className="mt-5 space-y-3 text-sm">
-              {c.l.map(([to, label]) => <li key={label}><Link to={to} className="link-line">{label}</Link></li>)}
+              {(c.l as [string,string][]).map(([to, label]) => <li key={label}><a href={to} className="link-line">{label}</a></li>)}
             </ul>
           </div>
         ))}
