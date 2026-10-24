@@ -14,7 +14,7 @@ export function useReveals(scope: RefObject<HTMLElement | null>, deps: unknown[]
       gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((el) => {
         gsap.from(el, {
           y: 40, opacity: 0, duration: 1.2, ease: "expo.out",
-          delay: Number(el.dataset.delay ?? 0),
+          delay: Number(el.dataset["delay"] ?? 0),
           scrollTrigger: { trigger: el, start: "top 88%" },
         });
       });
@@ -27,7 +27,7 @@ export function useReveals(scope: RefObject<HTMLElement | null>, deps: unknown[]
         if (img) gsap.fromTo(img, { scale: 1.25 }, { scale: 1, duration: 1.8, ease: "expo.out", scrollTrigger: { trigger: el, start: "top 85%" } });
       });
       gsap.utils.toArray<HTMLElement>("[data-parallax]").forEach((el) => {
-        const amt = Number(el.dataset.parallax || 12);
+        const amt = Number(el.dataset["parallax"] || 12);
         gsap.fromTo(el, { yPercent: -amt }, {
           yPercent: amt, ease: "none",
           scrollTrigger: { trigger: el.parentElement, start: "top bottom", end: "bottom top", scrub: true },
