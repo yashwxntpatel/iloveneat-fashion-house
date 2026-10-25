@@ -46,7 +46,7 @@ export function Header() {
             <img
               src={logo.url}
               alt="NEAT"
-              className={`h-7 w-auto transition-[filter] duration-700 md:h-9 ${overHero ? "brightness-0 invert" : ""}`}
+              className={`h-8 w-auto transition-[filter] duration-700 md:h-11 ${overHero ? "brightness-0 invert" : ""}`}
             />
           </Link>
           <div className="flex items-center justify-end gap-8">
