@@ -4,10 +4,10 @@ import ig3 from "@/assets/ig/ig3.jpg.asset.json";
 import ig4 from "@/assets/ig/ig4.jpg.asset.json";
 import ig5 from "@/assets/ig/ig5.jpg.asset.json";
 import ig6 from "@/assets/ig/ig6.jpg.asset.json";
-import dressStanding from "@/assets/look-dress-standing.jpg";
-import dressFlat from "@/assets/look-dress-flatlay.jpg";
-import suitStanding from "@/assets/look-ivory-suit-standing.jpg";
-import shirtDetail from "@/assets/look-tiger-shirt-detail.jpg";
+import dressStandingAsset from "@/assets/look-dress-standing.jpg.asset.json";
+import dressFlatAsset from "@/assets/look-dress-flatlay.jpg.asset.json";
+import suitStandingAsset from "@/assets/look-ivory-suit-standing.jpg.asset.json";
+import shirtDetailAsset from "@/assets/look-tiger-shirt-detail.jpg.asset.json";
 
 export const media = {
   salon: ig1.url,
@@ -16,10 +16,10 @@ export const media = {
   trial: ig4.url,
   scissors: ig5.url,
   tiger: ig6.url,
-  dressStanding,
-  dressFlat,
-  suitStanding,
-  shirtDetail,
+  dressStanding: dressStandingAsset.url,
+  dressFlat: dressFlatAsset.url,
+  suitStanding: suitStandingAsset.url,
+  shirtDetail: shirtDetailAsset.url,
 };
 
 export type Product = {
