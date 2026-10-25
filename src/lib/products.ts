@@ -1,20 +1,21 @@
+import ig1 from "@/assets/ig/ig1.jpg.asset.json";
+import ig2 from "@/assets/ig/ig2.jpg.asset.json";
+import ig3 from "@/assets/ig/ig3.jpg.asset.json";
+import ig4 from "@/assets/ig/ig4.jpg.asset.json";
+import ig5 from "@/assets/ig/ig5.jpg.asset.json";
+import ig6 from "@/assets/ig/ig6.jpg.asset.json";
 import dressStanding from "@/assets/look-dress-standing.jpg";
 import dressFlat from "@/assets/look-dress-flatlay.jpg";
 import suitStanding from "@/assets/look-ivory-suit-standing.jpg";
 import shirtDetail from "@/assets/look-tiger-shirt-detail.jpg";
 
-// Files in public/ are served as-is from the site root, so these root-relative URLs resolve on
-// Vercel, `vite preview` and any other static host. Drop the files into public/images and
-// public/video (see MISSING_ASSETS.md), then run `npm run check:assets` to verify them.
 export const media = {
-  salon: "/images/ig1.jpg",
-  sofa: "/images/ig2.jpg",
-  carpet: "/images/ig3.jpg",
-  trial: "/images/ig4.jpg",
-  scissors: "/images/ig5.jpg",
-  tiger: "/images/ig6.jpg",
-  logo: "/images/logo.png",
-  heroVideo: "/video/hero.mp4",
+  salon: ig1.url,
+  sofa: ig2.url,
+  carpet: ig3.url,
+  trial: ig4.url,
+  scissors: ig5.url,
+  tiger: ig6.url,
   dressStanding,
   dressFlat,
   suitStanding,
@@ -43,25 +44,10 @@ export const products: Product[] = [
     line: "Black silk satin, hand embroidered leopards",
     description:
       "A long column in liquid black satin, scattered with leopards stitched by hand in bronze thread. The collar is beaded in garnet red, the only loud thing about it.",
-    details: [
-      "Silk satin",
-      "Hand embroidered motifs",
-      "Beaded collar",
-      "Concealed back zip",
-      "Dry clean only",
-    ],
-    colours: [
-      {
-        name: "Noir",
-        swatch: "oklch(0.16 0.008 40)",
-      },
-    ],
+    details: ["Silk satin", "Hand embroidered motifs", "Beaded collar", "Concealed back zip", "Dry clean only"],
+    colours: [{ name: "Noir", swatch: "oklch(0.16 0.008 40)" }],
     sizes: ["XS", "S", "M", "L", "XL"],
-    images: [
-      media.dressStanding,
-      media.carpet,
-      media.dressFlat,
-    ],
+    images: [media.dressStanding, media.carpet, media.dressFlat],
   },
   {
     slug: "bengal-lounge-dress",
@@ -71,28 +57,13 @@ export const products: Product[] = [
     line: "Midi length, beaded collar",
     description:
       "Cut to be lived in: sat on, lain across, walked through. Embroidered Bengal cats prowl the hem and sleeves of a soft black satin midi.",
-    details: [
-      "Silk blend satin",
-      "Three quarter sleeve",
-      "Beaded garnet collar",
-      "Relaxed fit",
-    ],
+    details: ["Silk blend satin", "Three quarter sleeve", "Beaded garnet collar", "Relaxed fit"],
     colours: [
-      {
-        name: "Noir",
-        swatch: "oklch(0.16 0.008 40)",
-      },
-      {
-        name: "Oxblood",
-        swatch: "oklch(0.3 0.09 18)",
-      },
+      { name: "Noir", swatch: "oklch(0.16 0.008 40)" },
+      { name: "Oxblood", swatch: "oklch(0.3 0.09 18)" },
     ],
     sizes: ["XS", "S", "M", "L"],
-    images: [
-      media.sofa,
-      media.dressFlat,
-      media.carpet,
-    ],
+    images: [media.sofa, media.dressFlat, media.carpet],
   },
   {
     slug: "kiss-pinstripe-suit",
@@ -102,23 +73,10 @@ export const products: Product[] = [
     line: "Ivory pinstripe blazer and short",
     description:
       "Too playful for a serious suit? Ivory pinstripe tailoring, sharply cut, with red kisses embroidered across the jacket and short. Worn as a set or apart.",
-    details: [
-      "Wool blend pinstripe",
-      "Single breasted",
-      "Embroidered kiss motifs",
-      "Tailored short included",
-    ],
-    colours: [
-      {
-        name: "Ivory",
-        swatch: "oklch(0.94 0.02 85)",
-      },
-    ],
+    details: ["Wool blend pinstripe", "Single breasted", "Embroidered kiss motifs", "Tailored short included"],
+    colours: [{ name: "Ivory", swatch: "oklch(0.94 0.02 85)" }],
     sizes: ["34", "36", "38", "40", "42"],
-    images: [
-      media.suitStanding,
-      media.trial,
-    ],
+    images: [media.suitStanding, media.trial],
   },
   {
     slug: "tiger-patch-shirt",
@@ -128,23 +86,10 @@ export const products: Product[] = [
     line: "Silk twill, appliqued portrait patches",
     description:
       "A camp collar shirt in tiger stripe silk twill, patched with small framed tiger portraits. A collector's shirt for someone who keeps big cats in mind.",
-    details: [
-      "Silk twill",
-      "Camp collar",
-      "Applique patches",
-      "Horn buttons",
-    ],
-    colours: [
-      {
-        name: "Amber",
-        swatch: "oklch(0.6 0.12 60)",
-      },
-    ],
+    details: ["Silk twill", "Camp collar", "Applique patches", "Horn buttons"],
+    colours: [{ name: "Amber", swatch: "oklch(0.6 0.12 60)" }],
     sizes: ["S", "M", "L", "XL"],
-    images: [
-      media.tiger,
-      media.shirtDetail,
-    ],
+    images: [media.tiger, media.shirtDetail],
   },
 ];
 
@@ -165,8 +110,5 @@ export const collections = [
   },
 ];
 
-export const getProduct = (slug: string) =>
-  products.find((p) => p.slug === slug);
-
-export const formatPrice = (n: number) =>
-  `€${n.toLocaleString("en-US")}`;
+export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
+export const formatPrice = (n: number) => `€${n.toLocaleString("en-US")}`;
