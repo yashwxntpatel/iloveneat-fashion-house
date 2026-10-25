@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png.asset.json";
+import { media } from "@/lib/products";
 import { useCart } from "@/lib/cart";
 import { formatPrice, getProduct } from "@/lib/products";
 
@@ -44,7 +44,7 @@ export function Header() {
           </button>
           <Link to="/" aria-label="NEAT home" className="justify-self-center">
             <img
-              src={logo.url}
+              src={media.logo}
               alt="NEAT"
               className={`h-8 w-auto transition-[filter] duration-700 md:h-11 ${overHero ? "brightness-0 invert" : ""}`}
             />

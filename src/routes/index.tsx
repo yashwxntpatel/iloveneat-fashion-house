@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
-import hero from "@/assets/hero.mp4.asset.json";
 import { gsap, ScrollTrigger, useReveals } from "@/lib/motion";
 import { media, products } from "@/lib/products";
 import { ProductCard } from "@/components/site/ProductCard";
@@ -72,7 +71,7 @@ function Home() {
     <div ref={root}>
       <section data-hero className="relative h-[100svh] overflow-hidden bg-ink text-paper">
         <div data-hero-media className="absolute inset-0">
-          <video src={hero.url} autoPlay muted loop playsInline preload="auto" className="h-full w-full object-cover" />
+          <video src={media.hero} autoPlay muted loop playsInline preload="auto" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-ink/25" />
         <div data-hero-type className="absolute inset-x-0 bottom-0 px-5 pb-8 md:px-10 md:pb-10">
