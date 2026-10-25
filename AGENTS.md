@@ -8,3 +8,4 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+- Site media (images, video, logo) lives in public/media and is referenced by /media/... paths, so the GitHub repo is self-contained and deploys on any host (e.g. Vercel); do not use .asset.json CDN pointers.

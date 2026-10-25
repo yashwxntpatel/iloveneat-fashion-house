@@ -1,25 +1,17 @@
-import ig1 from "@/assets/ig/ig1.jpg.asset.json";
-import ig2 from "@/assets/ig/ig2.jpg.asset.json";
-import ig3 from "@/assets/ig/ig3.jpg.asset.json";
-import ig4 from "@/assets/ig/ig4.jpg.asset.json";
-import ig5 from "@/assets/ig/ig5.jpg.asset.json";
-import ig6 from "@/assets/ig/ig6.jpg.asset.json";
-import dressStandingAsset from "@/assets/look-dress-standing.jpg.asset.json";
-import dressFlatAsset from "@/assets/look-dress-flatlay.jpg.asset.json";
-import suitStandingAsset from "@/assets/look-ivory-suit-standing.jpg.asset.json";
-import shirtDetailAsset from "@/assets/look-tiger-shirt-detail.jpg.asset.json";
-
+// Media files live in public/media so they ship with the repo and work on any host.
 export const media = {
-  salon: ig1.url,
-  sofa: ig2.url,
-  carpet: ig3.url,
-  trial: ig4.url,
-  scissors: ig5.url,
-  tiger: ig6.url,
-  dressStanding: dressStandingAsset.url,
-  dressFlat: dressFlatAsset.url,
-  suitStanding: suitStandingAsset.url,
-  shirtDetail: shirtDetailAsset.url,
+  salon: "/media/ig1.jpg",
+  sofa: "/media/ig2.jpg",
+  carpet: "/media/ig3.jpg",
+  trial: "/media/ig4.jpg",
+  scissors: "/media/ig5.jpg",
+  tiger: "/media/ig6.jpg",
+  dressStanding: "/media/look-dress-standing.jpg",
+  dressFlat: "/media/look-dress-flatlay.jpg",
+  suitStanding: "/media/look-ivory-suit-standing.jpg",
+  shirtDetail: "/media/look-tiger-shirt-detail.jpg",
+  logo: "/media/logo.png",
+  hero: "/media/hero.mp4",
 };
 
 export type Product = {
